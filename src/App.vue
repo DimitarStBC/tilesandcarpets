@@ -31,6 +31,7 @@ export default {
 }
 #app {
   position: relative;
+  font-family: "Comfortaa", cursive;
 }
 .logo {
   width: 50px;
