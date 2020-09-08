@@ -82,4 +82,18 @@
   position: absolute;
   bottom: 20vh;
 }
+
+@media only screen and (max-width: 1100px) {
+  .landingSplit {
+    flex-direction: column;
+  }
+
+  .posBottom {
+    width: 220px;
+    bottom: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 </style>
