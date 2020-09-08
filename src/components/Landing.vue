@@ -104,6 +104,7 @@
 @media only screen and (max-width: 1100px) {
   .landingSplit {
     flex-direction: column;
+    height: 1200px;
   }
 
   .posBottom {
