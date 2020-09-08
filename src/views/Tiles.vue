@@ -2,7 +2,6 @@
   <div class>
     <div class="boxes">
       <div class="leftImage d-flex flex-column justify-content-around align-items-center">
-        <!-- corousel testimonials -->
         <Testimonials />
       </div>
       <div class="FAQ">
@@ -12,11 +11,6 @@
             <p id="question1More">1 лев и 20 стотинки на квадратен метър</p>
           </div>
           <i id="plus-1" class="fas fa-plus"></i>
-        </div>
-
-        <div class="FAQq">
-          <h2>Как работим</h2>
-          <i class="fas fa-plus"></i>
         </div>
       </div>
     </div>
@@ -109,5 +103,25 @@ export default {
 }
 #question1More {
   display: none;
+}
+
+@media only screen and (max-width: 1100px) {
+  .boxes {
+    flex-direction: column;
+  }
+  .leftImage {
+    width: 90%;
+    padding: 10px;
+    height: 500px;
+  }
+  .FAQ {
+    width: 100%;
+  }
+  .FAQq {
+    width: 100%;
+  }
+  .FAQq .fas {
+    font-size: 25px;
+  }
 }
 </style>

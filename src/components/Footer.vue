@@ -1,15 +1,15 @@
 <template>
   <div class="mb-5">
     <h1 class="aboutBA d-flex justify-content-center align-items-center m-5">Contact Us</h1>
-    <div class="d-flex justify-content-around flex-row">
-      <div class="w-300 d-flex flex-column">
+    <div class="d-flex justify-content-around row">
+      <div class="w-300 fmm d-flex flex-column">
         <h3>Свежест 42</h3>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae cupiditate porro corrupti, magnam delectus perspiciatis libero tenetur expedita quod adipisci sunt itaque aspernatur fuga explicabo nisi repellendus similique esse maiores!</p>
         <a href>
           <i class="fab fa-facebook-square">Facebook</i>
         </a>
       </div>
-      <div class="d-flex flex-column">
+      <div class="d-flex fmm flex-column">
         <div class="d-flex mt-2 flex-row align-items-center">
           <i class="fas m-2 fa-map-marker-alt"></i>
           <p>Бургас и околията</p>
@@ -27,7 +27,7 @@
           <a href>защита на личните данни</a>
         </div>
       </div>
-      <div>
+      <div class="fmm">
         <b-form @submit="onSubmit" v-if="show">
           <b-form-group
             id="input-group-1"
@@ -91,6 +91,9 @@ export default {
 
 
 <style scoped>
+.row {
+  flex-direction: row;
+}
 #input-4 {
   height: 100px;
   resize: none;
@@ -123,5 +126,24 @@ export default {
   height: 2px;
   background: rgb(65, 65, 65);
   display: inline-block;
+}
+
+@media only screen and (max-width: 1100px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .fmm {
+    margin: 20px 0;
+  }
+  .aboutBA {
+    font-size: 30px;
+  }
+  .aboutBA::before {
+    display: none;
+  }
+  .aboutBA::after {
+    display: none;
+  }
 }
 </style>

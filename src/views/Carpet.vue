@@ -13,11 +13,6 @@
           </div>
           <i id="plus-1" class="fas fa-plus"></i>
         </div>
-
-        <div class="FAQq">
-          <h2>Как работим</h2>
-          <i class="fas fa-plus"></i>
-        </div>
       </div>
     </div>
   </div>
@@ -109,5 +104,25 @@ export default {
 }
 #question1More {
   display: none;
+}
+
+@media only screen and (max-width: 1100px) {
+  .boxes {
+    flex-direction: column;
+  }
+  .leftImage {
+    width: 90%;
+    padding: 10px;
+    height: 500px;
+  }
+  .FAQ {
+    width: 100%;
+  }
+  .FAQq {
+    width: 100%;
+  }
+  .FAQq .fas {
+    font-size: 25px;
+  }
 }
 </style>
