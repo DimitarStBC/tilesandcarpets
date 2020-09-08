@@ -18,7 +18,7 @@
         <router-link
           class="btn btn-secondary"
           :to="{
-            name: 'Landing'       
+            name: 'Parquet'       
             }"
         >Виж повече</router-link>
       </div>
@@ -29,7 +29,7 @@
         <router-link
           class="btn btn-secondary"
           :to="{
-            name: 'Landing'       
+            name: 'Carpet'       
             }"
         >Виж повече</router-link>
       </div>
