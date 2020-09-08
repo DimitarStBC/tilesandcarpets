@@ -120,7 +120,7 @@ export default {
     padding: 0 10px;
   }
   .FAQq .fas {
-    font-size: 20px;
+    display: none;
   }
   .FAQq {
     width: 90%;
