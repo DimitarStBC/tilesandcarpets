@@ -28,7 +28,7 @@
         </div>
       </div>
       <div>
-        <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+        <b-form @submit="onSubmit" v-if="show">
           <b-form-group
             id="input-group-1"
             label="Email address:"
@@ -116,7 +116,7 @@ export default {
   content: "";
   width: 50px;
   height: 2px;
-  background: #3498db;
+  background: rgb(65, 65, 65);
   display: inline-block;
 }
 .aboutBA::after {
@@ -124,7 +124,7 @@ export default {
   content: "";
   width: 50px;
   height: 2px;
-  background: #3498db;
+  background: rgb(65, 65, 65);
   display: inline-block;
 }
 </style>

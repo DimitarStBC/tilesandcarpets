@@ -6,7 +6,7 @@
         <router-link
           class="btn btn-secondary"
           :to="{
-            name: 'Landing'       
+            name: 'Tiles'       
             }"
         >Виж повече</router-link>
       </div>
@@ -44,14 +44,32 @@
   background-size: cover;
   background-blend-mode: multiply;
 }
+.tile:hover {
+  background: url("../assets/landing/tiles.jpg") rgb(124, 124, 124);
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
 .carpet {
   background: url("../assets/landing/carpet.jpg") rgb(73, 73, 73);
   background-position: center;
   background-size: cover;
   background-blend-mode: multiply;
 }
+.carpet:hover {
+  background: url("../assets/landing/carpet.jpg") rgb(124, 124, 124);
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
 .parquet {
   background: url("../assets/landing/parquet.jpg") rgb(73, 73, 73);
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+.parquet:hover {
+  background: url("../assets/landing/parquet.jpg") rgb(124, 124, 124);
   background-position: center;
   background-size: cover;
   background-blend-mode: multiply;

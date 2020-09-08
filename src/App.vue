@@ -4,7 +4,7 @@
       <router-link :to="{
             name: 'Landing'       
             }">
-        <img src="@/assets/logo.png" width="50" alt />
+        <i class="fas fa-home"></i>
       </router-link>
     </div>
     <router-view />
@@ -38,6 +38,35 @@ export default {
   z-index: 2;
   top: 20px;
   left: 50px;
+}
+.logo .fas {
+  animation: vibrate;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+
+  font-size: 30px;
+  color: rgb(168, 187, 224);
+  border: 2px solid rgb(168, 187, 224);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+@keyframes vibrate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 * {

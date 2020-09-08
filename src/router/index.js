@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import Landing from '../components/Landing'
+import Tiles from '../views/Tiles'
 
 Vue.use(VueRouter)
 
@@ -10,6 +11,11 @@ const routes = [
     path: '/',
     name: 'Landing',
     component: Landing
+  },
+  {
+    path: '/tiles',
+    name: 'Tiles',
+    component: Tiles
   }
 ]
 
