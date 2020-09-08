@@ -91,9 +91,6 @@ export default {
 
 
 <style scoped>
-* {
-  color: rgb(65, 65, 65);
-}
 #input-4 {
   height: 100px;
   resize: none;
