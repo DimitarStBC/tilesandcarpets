@@ -106,9 +106,11 @@
     flex-direction: column;
     height: 1200px;
   }
-
+  .section:hover {
+    flex: 1;
+  }
   .posBottom {
-    width: 220px;
+    width: 80%;
     bottom: 0;
     top: 50%;
     left: 50%;
