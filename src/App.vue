@@ -34,7 +34,7 @@ export default {
   font-family: "Comfortaa", cursive;
 }
 .logo {
-  width: 50px;
+  width: 60px;
   position: absolute;
   z-index: 2;
   top: 20px;
@@ -51,7 +51,9 @@ export default {
   padding: 10px;
   border-radius: 50%;
 }
-
+* {
+  overflow-x: hidden;
+}
 @keyframes vibrate {
   0% {
     transform: rotate(0deg);

@@ -117,12 +117,14 @@ export default {
   }
   .FAQ {
     width: 100%;
-  }
-  .FAQq {
-    width: 100%;
+    padding: 0 10px;
   }
   .FAQq .fas {
-    font-size: 25px;
+    font-size: 20px;
+  }
+  .FAQq {
+    width: 90%;
+    margin: auto;
   }
 }
 </style>
