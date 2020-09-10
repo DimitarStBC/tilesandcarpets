@@ -148,7 +148,7 @@ export default {
         )
         .join("&");
     },
-    onSubmit(evt) {
+    onSubmit() {
       fetch("/", {
         method: "post",
         headers: {
