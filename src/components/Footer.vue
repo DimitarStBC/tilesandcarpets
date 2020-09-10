@@ -28,7 +28,16 @@
         </div>
       </div>
       <div class="fmm">
-        <b-form @submit="onSubmit" data-netlify="true" v-if="show">
+        <b-form
+          @submit="onSubmit"
+          method="POST"
+          data-netlify="true"
+          netlify
+          netlify-honeypot="bot-field"
+          v-if="show"
+          name="contactForm"
+        >
+          <input type="hidden" name="form-name" value="contactForm" />
           <b-form-group
             id="input-group-1"
             label="Email address:"
