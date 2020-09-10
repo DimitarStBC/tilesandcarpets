@@ -4,7 +4,7 @@
     <div class="d-flex justify-content-around row">
       <div class="w-300 fmm d-flex flex-column">
         <h3>Свежест 42</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae cupiditate porro corrupti, magnam delectus perspiciatis libero tenetur expedita quod adipisci sunt itaque aspernatur fuga explicabo nisi repellendus similique esse maiores!</p>
+        <p>За повече свободно време, за по-дълъг живот на мебелите Ви, за по-здравословен живот. Нашите клиенти са наше семейство! Грижим се едни за други във всеки един момент!</p>
         <a href>
           <i class="fab fa-facebook-square">Facebook</i>
         </a>
@@ -20,15 +20,15 @@
         </div>
         <div class="d-flex mt-2 flex-row align-items-center">
           <i class="fas m-2 fa-file-contract"></i>
-          <a href>общи условия</a>
+          <a class="aLinkColor" v-b-modal.activationLinkModal2>общи условия</a>
         </div>
         <div class="d-flex mt-2 flex-row align-items-center">
           <i class="fas m-2 fa-user-tie"></i>
-          <a href>защита на личните данни</a>
+          <a class="aLinkColor" v-b-modal.activationLinkModal>защита на личните данни</a>
         </div>
       </div>
       <div class="fmm">
-        <b-form @submit="onSubmit" v-if="show">
+        <b-form @submit="onSubmit" data-netlify="true" v-if="show">
           <b-form-group
             id="input-group-1"
             label="Email address:"
@@ -38,6 +38,7 @@
             <b-form-input
               id="input-1"
               v-model="form.email"
+              name="email"
               type="email"
               required
               placeholder="Имейл"
@@ -45,15 +46,31 @@
           </b-form-group>
 
           <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
-            <b-form-input id="input-2" v-model="form.name" required placeholder="Име"></b-form-input>
+            <b-form-input id="input-2" name="name" v-model="form.name" required placeholder="Име"></b-form-input>
           </b-form-group>
 
           <b-form-group id="input-group-3" label="Subject:" label-for="input-3">
-            <b-form-input id="input-3" v-model="form.subject" required placeholder="Тема"></b-form-input>
+            <b-form-input
+              id="input-3"
+              name="subject"
+              v-model="form.subject"
+              required
+              placeholder="Тема"
+            ></b-form-input>
           </b-form-group>
 
           <b-form-group id="input-group-4" label="Message:" label-for="input-4">
-            <b-form-textarea id="input-4" v-model="form.text" required placeholder="Съобщение"></b-form-textarea>
+            <b-form-textarea
+              id="input-4"
+              name="message"
+              v-model="form.text"
+              required
+              placeholder="Съобщение"
+            ></b-form-textarea>
+          </b-form-group>
+
+          <b-form-group>
+            <div data-netlify-recaptcha="true"></div>
           </b-form-group>
 
           <b-button type="submit" variant="secondary">Изпрати</b-button>
@@ -63,11 +80,45 @@
         </b-card>-->
       </div>
     </div>
+
+    <!-- Svejest 42 information -->
+    <b-modal
+      ok-only
+      size="xl"
+      class="modal fade"
+      id="activationLinkModal2"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div>
+        <Uslovia />
+      </div>
+    </b-modal>
+    <!-- Personal Privacy Protection -->
+    <b-modal
+      ok-only
+      class="modal fade"
+      size="lg"
+      id="activationLinkModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div>
+        <GDPR />
+      </div>
+    </b-modal>
   </div>
 </template>
 
 <script>
+import Uslovia from "./OU";
+import GDPR from "./GDPR";
+
 export default {
+  components: {
+    Uslovia,
+    GDPR,
+  },
   data() {
     return {
       form: {
@@ -83,7 +134,6 @@ export default {
   methods: {
     onSubmit(evt) {
       evt.preventDefault();
-      alert(JSON.stringify(this.form));
     },
   },
 };
@@ -91,6 +141,9 @@ export default {
 
 
 <style scoped>
+.aLinkColor {
+  color: rgb(32, 96, 121);
+}
 .row {
   flex-direction: row;
 }
