@@ -5,7 +5,7 @@
       <div class="w-300 fmm d-flex flex-column">
         <h3>Свежест 42</h3>
         <p>За повече свободно време, за по-дълъг живот на мебелите Ви, за по-здравословен живот. Нашите клиенти са наше семейство! Грижим се едни за други във всеки един момент!</p>
-        <a href>
+        <a href="https://www.facebook.com/svejest42">
           <i class="fab fa-facebook-square">Facebook</i>
         </a>
       </div>
@@ -141,8 +141,24 @@ export default {
     };
   },
   methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join("&");
+    },
     onSubmit(evt) {
-      evt.preventDefault();
+      fetch("/", {
+        method: "post",
+        headers: {
+          "Content-Type": "application/x-www-urlencoded",
+        },
+        body: this.encode({
+          "form-name": "contactForm",
+          ...this.form,
+        }),
+      }).then();
     },
   },
 };
