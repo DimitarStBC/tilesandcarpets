@@ -122,6 +122,7 @@
 <script>
 import Uslovia from "./OU";
 import GDPR from "./GDPR";
+import $ from "jquery";
 
 export default {
   components: {
@@ -141,24 +142,12 @@ export default {
     };
   },
   methods: {
-    encode(data) {
-      return Object.keys(data)
-        .map(
-          (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-        )
-        .join("&");
-    },
-    onSubmit() {
-      fetch("/", {
-        method: "post",
-        headers: {
-          "Content-Type": "application/x-www-urlencoded",
-        },
-        body: this.encode({
-          "form-name": "contactForm",
-          ...this.form,
-        }),
-      }).then();
+    onSubmit(evt) {
+      evt.preventDefault();
+      var $form = $(this);
+      $.post($form.attr("action"), $form.serialize()).then(function () {
+        alert("Thank you!");
+      });
     },
   },
 };
