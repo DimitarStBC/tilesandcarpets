@@ -7,7 +7,7 @@ import axios from 'axios'
 
 
 
-axios.defaults.baseURL = 'https://sanitaryco.herokuapp.com'
+axios.defaults.baseURL = 'https://sanitaryco.herokuapp.com/api'
 
 new Vue({
   router,
