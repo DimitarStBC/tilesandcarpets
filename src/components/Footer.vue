@@ -140,9 +140,9 @@ export default {
 
       axios.post("/contact", {
         email: this.form.email,
-        name: this.form.name,
-        subject: this.form.subject,
-        text: this.form.text,
+        names: this.form.name,
+        subj: this.form.subject,
+        area: this.form.text,
       });
 
       this.form.email = "";
