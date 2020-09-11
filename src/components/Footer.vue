@@ -145,10 +145,11 @@ export default {
         text: this.form.text,
       });
 
-      this.email = "";
-      this.name = "";
-      this.subject = "";
-      this.text = "";
+      this.form.email = "";
+      this.form.name = "";
+      this.form.subject = "";
+      this.form.text = "";
+      alert("Ще се свържем с вас. Благодарим!");
     },
   },
 };
