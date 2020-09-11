@@ -5,9 +5,9 @@ import '../plugins/bootstrap-vue'
 import axios from 'axios'
 
 
-Vue.config.productionTip = false
 
-axios.defaults.baseURL = 'https://sanitaryco.herokuapp.com/'
+
+axios.defaults.baseURL = 'https://sanitaryco.herokuapp.com'
 
 new Vue({
   router,
