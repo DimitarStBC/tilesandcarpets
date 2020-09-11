@@ -144,6 +144,11 @@ export default {
         subject: this.form.subject,
         text: this.form.text,
       });
+
+      this.email = "";
+      this.name = "";
+      this.subject = "";
+      this.text = "";
     },
   },
 };
