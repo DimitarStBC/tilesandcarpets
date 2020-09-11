@@ -6,13 +6,15 @@ import Tiles from '../views/Tiles'
 import Parquet from '../views/Parquet'
 import Carpet from '../views/Carpet'
 
+
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
     name: 'Landing',
-    component: Landing
+    component: Landing,
+
   },
   {
     path: '/tiles',

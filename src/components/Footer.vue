@@ -1,6 +1,6 @@
 <template>
   <div class="mb-5">
-    <h1 class="aboutBA d-flex justify-content-center align-items-center m-5">Contact Us</h1>
+    <h1 class="aboutBA d-flex justify-content-center align-items-center m-5">потърси ни</h1>
     <div class="d-flex justify-content-around row">
       <div class="w-300 fmm d-flex flex-column">
         <h3>Свежест 42</h3>
@@ -122,7 +122,8 @@
 <script>
 import Uslovia from "./OU";
 import GDPR from "./GDPR";
-import $ from "jquery";
+
+import axios from "axios";
 
 export default {
   components: {
@@ -144,9 +145,11 @@ export default {
   methods: {
     onSubmit(evt) {
       evt.preventDefault();
-      var $form = $(this);
-      $.post($form.attr("action"), $form.serialize()).then(function () {
-        alert("Thank you!");
+      axios.post("/contact", {
+        email: this.form.email,
+        name: this.form.name,
+        subject: this.form.subject,
+        text: this.form.text,
       });
     },
   },
